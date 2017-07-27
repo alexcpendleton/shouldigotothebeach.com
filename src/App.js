@@ -16,8 +16,15 @@ class App extends Component {
       },
       waves: {
         height:"2-3ft waves"
+      },
+      crowds: {
+        bestGuess:"Shouldn't be too crowded!"
       }
     };
+    var apis = {
+      waves:"http://ja.magicseaweed.com/developer/forecast-api",
+      weather:"http://ja.magicseaweed.com/developer/forecast-api", // Has both on first glance
+    }
     return (
       <div className="App">
         <div className="App-header">
@@ -39,6 +46,9 @@ class App extends Component {
           </div>
           <div id="gnar">
             <p>{deets.waves.height}</p>
+          </div>
+          <div id="crowds">
+            <p>{deets.crowds.bestGuess}</p>
           </div>
         </div>
       </div>
