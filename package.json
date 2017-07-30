@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "enzyme": "^2.9.1",
     "gh-pages": "^1.0.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
@@ -13,9 +14,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://alexcpendleton.github.io/shouldigotothebeach.com"
+  "homepage": "https://alexcpendleton.github.io/shouldigotothebeach.com",
+  "devDependencies": {
+    "react-test-renderer": "^15.6.1"
+  }
 }
