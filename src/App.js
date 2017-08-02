@@ -4,6 +4,7 @@ import './App.css';
 
 import Header from './Header.js'
 import Times from './Times.js'
+import Weather from './Weather.js'
 
 class App extends Component {
   render() {
@@ -39,14 +40,7 @@ class App extends Component {
         </div>
         <div id="inspiration">
           <Times sun={model.sun} tide={model.tide} />
-          <div id="weather">
-            <div id="temperature">{model.weather.temperature}</div>
-            <div id="weatherIcon">
-              <img src={model.weather.icon.uri} 
-                alt={model.weather.description}
-                title="Weather Description Icon"/>
-            </div>
-          </div>
+          <Weather temperature={model.weather.temperature} icon={model.weather.icon} />
           <div id="gnar">
             <p>{model.waves.height}</p>
           </div>
