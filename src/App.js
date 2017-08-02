@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import Header from './Header.js'
+import Times from './Times.js'
 
 class App extends Component {
   render() {
@@ -37,12 +38,7 @@ class App extends Component {
           <Header proclamation={model.proclamation} beach={model.beach} />
         </div>
         <div id="inspiration">
-          <div id="times">
-            <p><strong>Sunrise</strong><span className="description">{model.sun.rise}</span></p>
-            <p><strong>Sunset</strong><span className="description">{model.sun.set}</span></p>
-            <p><strong>High Tide</strong><span className="description">{model.tide.high}</span></p>
-            <p><strong>Low Tide</strong><span className="description">{model.tide.low}</span></p>
-          </div>
+          <Times sun={model.sun} tide={model.tide} />
           <div id="weather">
             <div id="temperature">{model.weather.temperature}</div>
             <div id="weatherIcon">

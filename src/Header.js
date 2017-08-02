@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Header extends Component {
   render() {
-    const model = Object.assign({
+    const model = Object.assign({}, {
       beach:{name:""}
     }, this.props);
     return (

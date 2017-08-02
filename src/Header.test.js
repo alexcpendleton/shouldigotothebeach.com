@@ -15,6 +15,12 @@ it('renders props.proclamation in #proclamation', ()=> {
   expect(p.text())
     .toEqual(proclamation);
 });
+it('renders empty text in #proclamation when props.proclamation is not set', ()=> {
+  const component = shallow(<Header />);
+  const p = component.find("#proclamation");
+  expect(p.text())
+    .toEqual("");
+});
 
 it(`should render 'Should I go to the beach?' in h2`, () => {
   const component = shallow(<Header />);
