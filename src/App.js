@@ -5,10 +5,12 @@ import './App.css';
 import Header from './Header.js'
 import Times from './Times.js'
 import Weather from './Weather.js'
+import Waves from './Waves.js'
+import Crowds from './Crowds.js'
 
 class App extends Component {
   render() {
-    const model = {
+    const model = Object.assign({}, {
       proclamation:"Heck yeah, you should",
       beach: {
         name:"Crystal Cove, Newport Beach, CA"
@@ -23,30 +25,24 @@ class App extends Component {
         temperature:"70°"
       },
       waves: {
-        height:"2-3ft waves"
+        description:"2-3ft waves"
       },
       crowds: {
-        bestGuess:"Shouldn't be too crowded!"
+        description:"Shouldn't be too crowded!"
       }
-    };
+    }, this.props);
     const apis={
       waves:"http://ja.magicseaweed.com/developer/forecast-api",
       weather:"http://ja.magicseaweed.com/developer/forecast-api", // Has both on first glance
     }
     return (
       <div className="App">
-        <div className="App-header">
-          <Header proclamation={model.proclamation} beach={model.beach} />
-        </div>
+        <Header proclamation={model.proclamation} beach={model.beach} />
         <div id="inspiration">
           <Times sun={model.sun} tide={model.tide} />
           <Weather temperature={model.weather.temperature} icon={model.weather.icon} />
-          <div id="gnar">
-            <p>{model.waves.height}</p>
-          </div>
-          <div id="crowds">
-            <p>{model.crowds.bestGuess}</p>
-          </div>
+          <Waves description={model.waves.description} />
+          <Crowds description={model.crowds.description} />
         </div>
       </div>
     );

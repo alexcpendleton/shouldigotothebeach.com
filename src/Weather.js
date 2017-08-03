@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Times extends Component {
+class Weather extends Component {
   render() {
     /*
 
@@ -11,7 +11,8 @@ class Times extends Component {
     */
     const model = Object.assign({}, {
       icon:{
-
+        uri:"",
+        description:""
       }
     }, this.props);
     return (
@@ -25,4 +26,4 @@ class Times extends Component {
     )
   }
 }
-export default Times;
+export default Weather;
