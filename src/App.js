@@ -32,8 +32,7 @@ class App extends Component {
       }
     }, this.props);
     const apis={
-      waves:"http://ja.magicseaweed.com/developer/forecast-api",
-      weather:"http://ja.magicseaweed.com/developer/forecast-api", // Has both on first glance
+      waves:"http://ja.magicseaweed.com/developer/forecast-api"
     }
     return (
       <div className="App">
